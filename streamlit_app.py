@@ -106,3 +106,4 @@ QUESTION:
             st.markdown(response.text or "No text response was returned.")
         except Exception:
             st.error("Gemini could not answer. We’ll check the key and app settings.")
+            
