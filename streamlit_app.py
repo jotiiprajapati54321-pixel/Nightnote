@@ -58,7 +58,8 @@ STUDENT NOTES:
                 response.text or "No text response was returned."
             )
         except Exception:
-            st.error("Gemini could not answer. We’ll check the key and app settings.")
+            st.except Exception as error:
+    st.exception(error)("Gemini could not answer. We’ll check the key and app settings.")
 
 if st.session_state.get("study_result"):
     st.subheader("Your study help")
@@ -106,4 +107,3 @@ QUESTION:
             st.markdown(response.text or "No text response was returned.")
         except Exception:
             st.error("Gemini could not answer. We’ll check the key and app settings.")
-            
