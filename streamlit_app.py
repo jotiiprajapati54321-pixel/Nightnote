@@ -57,9 +57,8 @@ STUDENT NOTES:
             st.session_state["study_result"] = (
                 response.text or "No text response was returned."
             )
-        except Exception:
-            st.except Exception as error:
-    st.exception(error)("Gemini could not answer. We’ll check the key and app settings.")
+               except Exception as error:
+            st.exception(error) 
 
 if st.session_state.get("study_result"):
     st.subheader("Your study help")
